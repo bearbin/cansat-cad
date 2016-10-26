@@ -5,30 +5,30 @@ module gps_module() {
             cube([26,36,1], center=true);
             // Mounting Holes
             translate([10.5, 15.5, 0]) {
-                cylinder(h = 5, d = 3, center=true);
+                cylinder(h = 5, d = 3, center=true, $fn=25);
             }
             translate([-10.5, 15.5, 0]) {
-                cylinder(h = 5, d = 3, center=true);
+                cylinder(h = 5, d = 3, center=true, $fn=25);
             }
             translate([10.5, -15.5, 0]) {
-                cylinder(h = 5, d = 3, center=true);
+                cylinder(h = 5, d = 3, center=true, $fn=25);
             }
             translate([-10.5, -15.5, 0]) {
-                cylinder(h = 5, d = 3, center=true);
+                cylinder(h = 5, d = 3, center=true, $fn=25);
             }
             // Data Holes
             translate([0,16.5,0]) {
                 translate([-3.5, 0, 0]) {
-                    cylinder(h=5, d= 0.6, center=true);
+                    cylinder(h=5, d= 0.6, center=true, $fn=25);
                 }
                 translate([3.5, 0, 0]) {
-                    cylinder(h=5, d= 0.6, center=true);
+                    cylinder(h=5, d= 0.6, center=true, $fn=25);
                 }
                 translate([-1.2, 0, 0]) {
-                    cylinder(h=5, d= 0.6, center=true);
+                    cylinder(h=5, d= 0.6, center=true, $fn=25);
                 }
                 translate([1.2, 0, 0]) {
-                    cylinder(h=5, d= 0.6, center=true);
+                    cylinder(h=5, d= 0.6, center=true, $fn=25);
                 }
             }
         }
