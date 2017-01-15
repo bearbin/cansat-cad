@@ -13,21 +13,15 @@ tri_support();
 
 module circle_support() {
     difference() {
-        cylinder(h=12, d=66, center=true, $fn=120);
-        cylinder(h=25, d=60, center=true, $fn=3);
-        rotate(a=2) {
+        cylinder(h=12, d=65.5, center=true, $fn=120);
+        union() {
             cylinder(h=25, d=60, center=true, $fn=3);
+            rotate(a=2) cylinder(h=25, d=60, center=true, $fn=3);
+            rotate(a=-2) cylinder(h=25, d=60, center=true, $fn=3);
+            rotate(a=4) cylinder(h=25, d=60, center=true, $fn=3);
+            rotate(a=-4) cylinder(h=25, d=60, center=true, $fn=3);
+            cylinder(h=25, d=56, center=true, $fn=120);
         }
-        rotate(a=-2) {
-            cylinder(h=25, d=60, center=true, $fn=3);
-        }
-        rotate(a=4) {
-            cylinder(h=25, d=60, center=true, $fn=3);
-        }
-        rotate(a=-4) {
-            cylinder(h=25, d=60, center=true, $fn=3);
-        }
-        cylinder(h=25, d=54, center=true, $fn=9);
     }
 }
 
