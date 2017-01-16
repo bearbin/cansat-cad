@@ -9,7 +9,7 @@ module tri_support() {
     }
 }
 
-tri_support();
+
 
 module circle_support() {
     difference() {
@@ -25,6 +25,24 @@ module circle_support() {
     }
 }
 
+module tri_circle() {
+    difference() {
+        resize ([0, 0, 92], auto=[false, false, true]) circle_support();
+        union() {
+            translate([16, 27.7, 21]) rotate(a=[0,90,60]) cylinder(h=20, d=36, center=true, $fn=120);
+            translate([16, 27.7, -21]) rotate(a=[0,90,60]) cylinder(h=20, d=36, center=true, $fn=120);
+            rotate(a=[0,0,120]) {
+                translate([16, 27.7, 21]) rotate(a=[0,90,60]) cylinder(h=20, d=36, center=true, $fn=120);
+                translate([16, 27.7, -21]) rotate(a=[0,90,60]) cylinder(h=20, d=36, center=true, $fn=120);
+            }
+            rotate(a=[0,0,-120]) {
+                translate([16, 27.7, 21]) rotate(a=[0,90,60]) cylinder(h=20, d=36, center=true, $fn=120);
+                translate([16, 27.7, -21]) rotate(a=[0,90,60]) cylinder(h=20, d=36, center=true, $fn=120);
+            }
+        }
+    }
+}        
+
 module iside_seg() {
     intersection() {
         circle_support();
@@ -39,3 +57,5 @@ module wside_seg() {
     rotate(a=120) iside_seg();
     rotate(a=-120) iside_seg();
 }
+
+tri_circle();
