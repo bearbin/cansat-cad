@@ -13,13 +13,13 @@ module tri_support() {
 
 module circle_support() {
     difference() {
-        cylinder(h=12, d=66, center=true, $fn=120);
+        cylinder(h=12, d=65.5, center=true, $fn=120);
         union() {
             cylinder(h=25, d=62, center=true, $fn=3);
-            rotate(a=2) cylinder(h=25, d=62, center=true, $fn=3);
-            rotate(a=-2) cylinder(h=25, d=62, center=true, $fn=3);
-            rotate(a=4) cylinder(h=25, d=62, center=true, $fn=3);
-            rotate(a=-4) cylinder(h=25, d=62, center=true, $fn=3);
+            rotate(a=2) cylinder(h=25, d=61.5, center=true, $fn=3);
+            rotate(a=-2) cylinder(h=25, d=61.5, center=true, $fn=3);
+            rotate(a=4) cylinder(h=25, d=61.5, center=true, $fn=3);
+            rotate(a=-4) cylinder(h=25, d=61.5, center=true, $fn=3);
             cylinder(h=25, d=56, center=true, $fn=120);
         }
     }
@@ -33,8 +33,8 @@ module tri_circle() {
             // Mounting Flange
             translate([0, 0, 41]) {
                 difference() {
-                    cylinder(h=6, d=66, center=true, $fn=120);
-                    translate([0,0,-4])  cylinder(h=12, d1=66, d2=46, center=true, $fn=120);
+                    cylinder(h=6, d=65.5, center=true, $fn=120);
+                    translate([0,0,-4])  cylinder(h=12, d1=65.5, d2=46, center=true, $fn=120);
                     cylinder(h=6, d=46, center=true, $fn=120);
                 }
             }
